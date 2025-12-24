@@ -1,10 +1,19 @@
-=
-function App() {
+import { Link } from "react-router-dom"
+import AppRoutes from "./routes/AppRoutes"
+
+const App=()=> {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <h1 className="text-3xl font-bold text-blue-600">
-        Library Management System
-      </h1>
+    <div>
+      <div className="bg-red-600 text-white text-4xl font-bold p-4">
+  Tailwind color test
+</div>
+
+      <nav style={{marginBottom: "20px"}}>
+        <Link to="/books" style={{marginRight: "10px"}}>Books</Link>
+        <Link to="/issues" style={{marginRight: "10px"}}>Issues</Link>
+        <Link to="/users">Users</Link>
+      </nav>
+      <AppRoutes/>
     </div>
   )
 }
