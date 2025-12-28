@@ -1,4 +1,10 @@
 import api from "./axios";
 
 export const getBooks = () => api.get("/books");
-export const getBookById = (id: number) => api.get(`/books/${id}`);
+
+export const createBook = (data: {
+  title: string;
+  author: string;
+  isbn: string;
+  totalCopies: number;
+}) => api.post("/books", data);
